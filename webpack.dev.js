@@ -8,7 +8,9 @@ module.exports = merge(common, {
     publicPath: "/v1/",
   },
   devServer: {
-    publicPath: "/v1/",
-    writeToDisk: true,
+    devMiddleware: {
+      publicPath: "/v1/",
+      writeToDisk: true,
+    },
   },
 });

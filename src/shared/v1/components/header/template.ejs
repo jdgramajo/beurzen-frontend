@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-light">
   <div class="container">
-    <div class="navbar-brand" onclick="<%- data.router.main -%>">
-      <img src="<%- data.img.src -%>" alt="logo" width="60pem" height="35pem" />
+    <div class="navbar-brand" onclick="<%- data.router.toRoot -%>">
+      <img src="<%- data.img.src -%>" alt="logo" width="60pem" height="45pem" />
     </div>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
@@ -10,7 +10,7 @@
       <ul class="navbar-nav">
         <% data.itemList.forEach((item) => { %>
         <li class="nav-item align-self-end">
-          <a href="<%- item.href -%>" class="nav-link"></a>
+          <a href="<%- item.href -%>" class="nav-link"><%- item.name -%></a>
         </li>
         <% }); %>
       </ul>

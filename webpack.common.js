@@ -26,7 +26,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(svg)$/,
+        test: /\.(svg|png|jpg|gif)$/,
         type: "asset/resource",
       },
       {
