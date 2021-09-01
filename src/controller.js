@@ -1,17 +1,17 @@
 import router from "./shared/v1/router";
-import logo from "../427x320.png";
+import logo from "../beurzen.png";
+import favicon from "../favicon.ico";
 
 const headerTemplate = require("ejs-compiled-loader!./shared/v1/components/header/template.ejs");
 
 // TODO: Change file.
 const tabIcon = document.createElement("link");
 tabIcon.setAttribute("rel", "icon");
-tabIcon.setAttribute("href", logo);
+tabIcon.setAttribute("href", favicon);
 document.head.appendChild(tabIcon);
 
 const headerData = {
   data: {
-    router,
     img: {
       src: logo,
     },
@@ -23,3 +23,5 @@ const headerData = {
 };
 
 document.body.innerHTML += headerTemplate(headerData);
+const headerBrand = document.getElementById("header-brand");
+headerBrand.addEventListener("click", router.toRoot);
