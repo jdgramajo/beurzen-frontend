@@ -3,8 +3,8 @@ import logo from "../beurzen.png";
 import favicon from "../favicon.ico";
 
 const headerTemplate = require("ejs-compiled-loader!./shared/v1/components/header/template.ejs");
+const formTemplate = require("ejs-compiled-loader!./shared/v1/components/form/template.ejs");
 
-// TODO: Change file.
 const tabIcon = document.createElement("link");
 tabIcon.setAttribute("rel", "icon");
 tabIcon.setAttribute("href", favicon);
@@ -25,3 +25,5 @@ const headerData = {
 document.body.innerHTML += headerTemplate(headerData);
 const headerBrand = document.getElementById("header-brand");
 headerBrand.addEventListener("click", router.toRoot);
+
+document.body.innerHTML += formTemplate();
