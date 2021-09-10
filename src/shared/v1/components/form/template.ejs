@@ -1,24 +1,28 @@
-<div class="container col-12 col-sm-9 col-md-8 col-lg-7 col-xl-6 col-xxl-4" style="margin-top: 100px;">
-  <form class="mt-5" action="" novalidate>
-    <div class="d-flex flex-column">
-      <div class="d-flex justify-content-center h3 mb-3">Login</div>
-      <div class="mb-2 form-floating">
-        <input id="user-input" type="text" placeholder="Usuario" class="form-control" required>
-        <label for="user-input">Usuario</label>
-        <div class="invalid-feedback">
-          Usuario es requerido.
+<div class="container col-12 col-sm-10 col-md-9 col-lg-8 col-xl-6 col-xxl-4 mt-5">
+  <div style="margin-top: 100px;">
+    <div class="card p-5">
+      <form action="" novalidate>
+        <div class="d-flex flex-column">
+          <div class="d-flex justify-content-center h3 mb-3">Login</div>
+          <div class="my-2 form-floating">
+            <input id="user-input" type="text" placeholder="Usuario" class="form-control" required>
+            <label for="user-input">Usuario</label>
+            <div class="invalid-feedback">
+              Usuario es requerido.
+            </div>
+          </div>
+          <div class="mb-2 form-floating">
+            <input id="password-input" type="password" placeholder="Contraseña" class="form-control" required>
+            <label for="user-input">Contraseña</label>
+            <div class="invalid-feedback">
+              Contraseña es requerida.
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-lg btn-outline-success w-50">Ingresar</button>
+          </div>
         </div>
-      </div>
-      <div class="mb-2 form-floating">
-        <input id="password-input" type="password" placeholder="Contraseña" class="form-control" required>
-        <label for="user-input">Contraseña</label>
-        <div class="invalid-feedback">
-          Contraseña es requerida.
-        </div>
-      </div>
-      <div class="d-flex justify-content-center mb-2">
-        <button type="submit" class="btn btn-lg btn-outline-success w-50">Ingresar</button>
-      </div>
+      </form>
     </div>
-  </form>
+  </div>
 </div>
