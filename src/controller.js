@@ -24,18 +24,27 @@ const headerData = {
 };
 
 document.body.innerHTML += headerTemplate(headerData);
-const headerBrand = document.getElementById("header-brand");
-headerBrand.addEventListener("click", router.toRoot);
-
-const submitLoginAndRedirect = async (event) => {
-  const loginSuccess = await login(event);
-  if (!loginSuccess) router.toError();
-  router.toMain();
-};
 
 document.body.innerHTML += formTemplate({
   submitFunction: submitLoginAndRedirect,
 });
+
+// Event setup needs to be at the end to make sure elements exist. TODO: Not good, fix.
+
+const submitLoginAndRedirect = async (event) => {
+  const loginSuccess = await login(event);
+  if (!loginSuccess) {
+    // router.toError();
+    console.log("Login failed.");
+  } else {
+    // router.toMain();
+    console.log("Login success!");
+  }
+};
+
 const loginForm = document.getElementById("login-form");
 const submitButton = document.getElementById("submit-button");
 submitButton.addEventListener("click", submitLoginAndRedirect.bind(loginForm));
+
+const headerBrand = document.getElementById("header-brand");
+headerBrand.addEventListener("click", router.toRoot);

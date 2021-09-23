@@ -1,6 +1,6 @@
 import { postCredentials, postPWDChange } from "../requests/auth";
 
-// The event.target is the form, bound to the function programmatically.
+// The event.target is the form submit button, bound to the function programmatically.
 const login = async (event) => {
   event.preventDefault();
 
@@ -12,8 +12,8 @@ const login = async (event) => {
     return false;
   }
 
-  const username = document.getElementById("username-group-input").value;
-  const password = document.getElementById("password-group-input").value;
+  const username = document.getElementById("user-input").value;
+  const password = document.getElementById("password-input").value;
 
   try {
     return await postCredentials(username, password);
